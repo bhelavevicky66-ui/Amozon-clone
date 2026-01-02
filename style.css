@@ -159,6 +159,12 @@ span {
   gap: 5px;
 }
 
+@media (min-width: 1024px) {
+  .panel-all {
+    display: none;
+  }
+}
+
 .panel-ops p {
   display: inline;
   margin-left: 15px;
@@ -388,6 +394,17 @@ ul p:hover {
   .box-img {
     height: 240px;
   }
+
+  /* Hide less important nav items on tablet */
+  .nav-address,
+  .nav-return,
+  .panel-all {
+    display: none;
+  }
+
+  .nav-search {
+    width: 55%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -399,15 +416,81 @@ ul p:hover {
     height: auto;
     flex-wrap: wrap;
     padding: 10px;
+    justify-content: space-between;
   }
 
+  .nav-logo {
+    order: 1;
+  }
+
+  .nav-signin {
+    order: 2;
+  }
+
+  .nav-cart {
+    order: 3;
+  }
+
+  /* Search bar on new line */
   .nav-search {
+    order: 4;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0 5px 0;
+    display: flex;
+  }
+
+  /* Hide sub-nav text links and 'All' menu on mobile */
+  .panel-ops,
+  .nav-address,
+  .nav-return,
+  .panel-all {
+    display: none;
+  }
+
+  /* Center the remaining content (Deals text) */
+  .panel {
+    justify-content: center;
+  }
+
+  /* Stack footer on mobile */
+  .foot-panel2 {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  ul {
+    margin-bottom: 20px;
   }
 
   .hero-section {
     height: 200px;
+  }
+}
+
+/* Prevent horizontal scroll globally */
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure no element accidentally causes overflow */
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+
+  /* Prevent search bar from causing overflow due to padding/margin */
+  .nav-search {
+    width: 100%;
+    margin: 10px 0 5px 0;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to width */
   }
 }
 
@@ -424,45 +507,49 @@ ul p:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
-  width: auto;
-  padding: 30px 0;
+  padding: 35px 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: white;
+  margin-top: 15px;
 }
 
 .signin-msg {
   font-size: 13px;
-  margin-top: 11em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #0F1111;
 }
 
 .signin-btn {
-  background-color: #FFD814;
-  border: 1px solid #FCD200;
-  border-radius: 8px;
-  padding: 6px 100px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 3px;
+  width: 280px;
+  padding: 8px 0;
   cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
   font-size: 13px;
-  font-weight: 600;
-  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, .5);
-  margin: 5px 0;
-  width: auto;
+  font-weight: 700;
+  color: #111;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .signin-btn:hover {
-  background-color: #F7CA00;
-  border-color: #F2C200;
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
 }
 
 .signin-new {
   font-size: 11px;
-  margin-top: 5px;
+  margin-top: 8px;
+  color: #0F1111;
 }
 
 .signin-new span {
   color: #007185;
   cursor: pointer;
+  display: inline;
 }
 
 .signin-new span:hover {
