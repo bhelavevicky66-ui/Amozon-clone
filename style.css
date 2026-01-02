@@ -161,11 +161,14 @@ span{
    padding: 20px 0px 15px;
    margin-top: 15px;
 }
-.box-image{
-    height:300px;
+.box-img {
+    height: 300px;
     background-size: cover;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .box-content{
     margin-left: 1rem;
