@@ -26,25 +26,28 @@
 }
 
 .border {
-  border: 2px solid transparent;
+  border: 1.5px solid transparent;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .border:hover {
-  border: 2px solid white;
+  border: 1.5px solid white;
 }
 
 /* box2 */
 .add-first {
   color: #cccccc;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-left: 15px;
 }
 
 .add-second {
   color: white;
   font-size: 1rem;
-  margin-left: 4px;
-  font-weight: bold;
+  margin-left: 3px;
+  font-weight: 700;
 }
 
 .add-icon {
@@ -59,65 +62,85 @@
   width: 620px;
   max-width: 100%;
   height: 40px;
-  border-radius: 3px;
-  margin-left: 13px;
-  gap: 6px;
-  padding: 0 6px;
+  border-radius: 4px;
+  margin-left: 10px;
+  overflow: hidden;
 }
 
 .search-select {
   background-color: #f3f3f3;
-  height: 36px;
-  padding: 0 8px;
-  border-radius: 3px;
+  height: 40px;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
   border: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.search-select:hover {
+  background-color: #dadada;
+  color: black;
 }
 
 .search-input {
-  height: 34px;
-  flex: 1 1 auto;
+  height: 40px;
+  flex: 1;
   font-size: 1rem;
   border: none;
-  padding: 0 8px;
+  padding: 0 10px;
   outline: none;
-  min-width: 80px;
 }
 
 .search-icon {
-  height: 34px;
-  width: 42px;
+  height: 40px;
+  width: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   background-color: #febd68;
-  border-radius: 3px;
+  border-radius: 0 4px 4px 0;
   color: #0f1111;
   border: none;
+  cursor: pointer;
 }
 
-.nav-search:hover {
-  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.15);
+.search-icon:hover {
+  background-color: #f3a847;
+}
+
+.nav-search:focus-within {
+  box-shadow: 0 0 0 3px #f90;
+}
+
+.nav-signin,
+.nav-return,
+.nav-cart {
+  padding: 8px 5px;
 }
 
 span {
-  font-size: 0.7rem;
-
+  font-size: 0.8rem;
+  display: block;
 }
 
 .nav-second {
-  font-size: 0.85rem;
-  font-weight: bold;
-}
-
-.nav-cart i {
-  font-size: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: -2px;
 }
 
 .nav-cart {
-  font-size: 0.8rem;
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.9rem;
   font-weight: 700;
+  gap: 5px;
+}
+
+.nav-cart i {
+  font-size: 32px;
 }
 
 .panel {
@@ -129,19 +152,33 @@ span {
   justify-content: space-evenly;
 }
 
+.panel-all {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .panel-ops p {
   display: inline;
   margin-left: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.panel-ops p:hover {
+  text-decoration: underline;
 }
 
 .panel-ops {
   width: 70%;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .panel-deals {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .hero-section {
